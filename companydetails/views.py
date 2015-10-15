@@ -4,8 +4,8 @@ from django.template import RequestContext
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .models import CompanyDetails, OwnerDetails
-from .serializers import CompanySerializer, OwnerSerializer
+from .models import CompanyDetails
+from .serializers import CompanySerializer
 from django.http import HttpResponse
 
 def index(request):
