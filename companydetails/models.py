@@ -13,11 +13,3 @@ class CompanyDetails(models.Model):
 
 	class Meta:
 		verbose_name = 'Company Details'
-
-class OwnerDetails(models.Model):
-	id = models.AutoField(primary_key=True)
-	company_id = models.ForeignKey('CompanyDetails')
-	name = models.CharField(unique=True, max_length=100, null=False, blank=False)
-
-	class Meta:
-		verbose_name = 'OwnerDetails'
