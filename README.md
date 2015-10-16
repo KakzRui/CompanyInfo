@@ -20,3 +20,10 @@ curl -i -X PUT -H "Content-Type:application/json" http://127.0.0.1:8000/api/comp
 
 For DELETE
 curl -i -X DELETE -H "Content-Type:application/json" http://127.0.0.1:8000/api/companylist/15/
+
+Below are the applications installed for this project.
+
+Python 2.7.6
+django version - 1.7.5
+djangorestframework - 3.0.5
+Mysql 5.6.2
