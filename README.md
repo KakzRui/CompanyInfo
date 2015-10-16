@@ -14,3 +14,9 @@ curl -i -X GET -H "Content-Type:application/json" http://127.0.0.1:8000/api/comp
 
 For POST
 curl -i -X POST -H "Content-Type:application/json" http://127.0.0.1:8000/api/companylist/ -d '{"company_id":106,"name":"EuroCouriers","address":"5th Street","city":"Oslo","country":"Norway","email":"eurocouriers@mail.com","phone":5133232323454}'
+
+For PUT
+curl -i -X PUT -H "Content-Type:application/json" http://127.0.0.1:8000/api/companylist/1/ -d '{"id":1,"company_id":100,"name":"SeasonTravels","address":"8th Street","city":"Stockholm","country":"Sweden","email":"seasontravels@mail.com","phone":62332323454}'
+
+For DELETE
+curl -i -X DELETE -H "Content-Type:application/json" http://127.0.0.1:8000/api/companylist/15/
