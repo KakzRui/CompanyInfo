@@ -166,7 +166,6 @@ companies.controller('ListCtrl', function ListCtrl($scope, $log, $http, ModelUti
 
     };
 
-
 });
 
 
@@ -175,7 +174,7 @@ companies.controller('ListCtrl', function ListCtrl($scope, $log, $http, ModelUti
 	<div ng-controller="ListCtrl" ng-init="initialize('Ready for action')">
 		<h1><center>Companies List</h1>
 		<ul class="display-list">
-			<li ng-repeat="each in companydetails">Id: {[{ each.id }]}; Company Id: {[{ each.company_id }]}; Name: {[{ each.name }]}; Address: {[{ each.address }]}; City: {[{ each.city }]}; Country: {[{ each.country }]}; Email: {[{ each.email }]}; Phone: {[{ each.phone }]}       <button ng-click="del(each)">Del</button></li>
+			<li ng-repeat="each in companydetails">Id: {[{ each.id }]}; Company Id: {[{ each.company_id }]}; Name: {[{ each.name }]}; Address: {[{ each.address }]}; City: {[{ each.city }]}; Country: {[{ each.country }]}; Email: {[{ each.email }]}; Phone: {[{ each.phone }]}      <button ng-click="del(each)">Del</button></li>
 		</ul>
 		<form>
 			<h3 style="margin-left:25px">Add or Update Company details</h3>

@@ -62,6 +62,11 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         # 'rest_framework.permissions.IsAuthenticated',
     ),
+    'DEFAULT_RENDERER_CLASSES': ( 
+        # 'restapi.renderers.ListWrappingJSONRenderer', 
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer', 
+    )
     # 'DEFAULT_AUTHENTICATION_CLASSES': (
         # 'rest_framework.authentication.OAuth2Authentication',
         # 'rest_framework.authentication.BasicAuthentication',
@@ -105,3 +110,72 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': True,
+    'formatters': {
+        'standard': {
+            'format': '%(asctime)s [%(levelname)s] %(name)s: %(message)s'
+        },
+    },
+    'handlers': {
+        'file_logging': {
+            'level':'DEBUG',
+            'class':'logging.handlers.RotatingFileHandler',
+            'filename': '/var/html/logs/company_log.log',
+            'maxBytes': 1024*1024*5, # 5 MB
+            'backupCount': 5,
+            'formatter':'standard',
+        },
+        'db_logging': {
+            'level' : 'ERROR',
+            'class' : 'logging.handlers.RotatingFileHandler',
+            'filename': '/var/html/logs/django_db.log',
+            'maxBytes': 1024*1024*5, # 5 MB
+            'backupCount': 5,
+            'formatter':'standard',
+        },
+        'request_handler': {
+            'level':'ERROR',
+            'class':'logging.handlers.RotatingFileHandler',
+            'filename': '/var/html/logs/django_request.log',
+            'maxBytes': 1024*1024*5, # 5 MB
+            'backupCount': 5,
+            'formatter':'standard',
+        },
+        'soaplib': {
+            'level':'ERROR',
+            'class':'logging.handlers.RotatingFileHandler',
+            'filename': '/var/html/logs/soaplib.log',
+            'maxBytes': 1024*1024*5, # 5 MB
+            'backupCount': 5,
+            'formatter':'standard',
+        },
+    },
+    'loggers': {
+
+        '': {
+            'handlers': ['file_logging'],
+            'level': 'DEBUG',
+            'propagate': False
+        },
+        'django.db' : {
+            'handlers' : ['db_logging'],
+            'level' : 'DEBUG',
+            'propagate': True
+        },
+        'django.request': {
+            'handlers': ['request_handler'],
+            'level': 'DEBUG',
+            'propagate': True
+        },
+        'soaplib': {
+            'handlers': ['soaplib'],
+            'level': 'DEBUG',
+            'propagate': True
+        },
+    }
+}
+
+

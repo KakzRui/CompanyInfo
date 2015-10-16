@@ -1,0 +1,1416 @@
+2015-10-16 09:11:26,942 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerlist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 83, in OwnerList
+    name = serializer.validated_data['company']
+KeyError: 'company'
+2015-10-16 09:14:51,717 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerlist/1/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: OwnerListDetail() got an unexpected keyword argument 'id'
+2015-10-16 09:16:33,616 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerlist/1/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: OwnerListDetail() got an unexpected keyword argument 'name'
+2015-10-16 09:16:56,554 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerlist/1/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/manoj/Documents/companyinfo/companyinfo/urls.py", line 9, in <module>
+    url(r'^api/', include('companydetails.urls')),
+  File "/Library/Python/2.7/site-packages/django/conf/urls/__init__.py", line 28, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/manoj/Documents/companyinfo/companydetails/urls.py", line 13, in <module>
+    urlpatterns = format_suffix_patterns(urlpatterns)
+  File "/Library/Python/2.7/site-packages/rest_framework/urlpatterns.py", line 62, in format_suffix_patterns
+    return apply_suffix_patterns(urlpatterns, suffix_pattern, suffix_required)
+  File "/Library/Python/2.7/site-packages/rest_framework/urlpatterns.py", line 24, in apply_suffix_patterns
+    regex = urlpattern.regex.pattern.rstrip('$') + suffix_pattern
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 179, in regex
+    (regex, six.text_type(e)))
+ImproperlyConfigured: "^companylist/(?P<pk>[0-9]+)/ownerlist/(?P<pk>[0-9]+)/$" is not a valid regular expression: redefinition of group name 'pk' as group 2; was group 1
+2015-10-16 09:19:07,777 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerlist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 77, in OwnerList
+    return Response(serializer.data)
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 615, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 565, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 419, in to_representation
+    fields = [field for field in self.fields.values() if not field.write_only]
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 312, in fields
+    for key, value in self.get_fields().items():
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 911, in get_fields
+    (list(missing_fields)[0], self.__class__.__name__)
+AssertionError: Field `company` has been declared on serializer `OwnerSerializer`, but is missing from `Meta.fields`.
+2015-10-16 09:21:10,612 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerlist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 83, in OwnerList
+    name = serializer.validated_data['company']
+KeyError: 'company'
+2015-10-16 09:23:54,305 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerlist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/manoj/Documents/companyinfo/companyinfo/urls.py", line 9, in <module>
+    url(r'^api/', include('companydetails.urls')),
+  File "/Library/Python/2.7/site-packages/django/conf/urls/__init__.py", line 28, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/manoj/Documents/companyinfo/companydetails/urls.py", line 2, in <module>
+    from companydetails.views import CompanyList, CompanyListDetail, OwnerList, OwnerListDetail
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 80
+    serializer = OwnerSerializer(data=request.DATA, pk)
+SyntaxError: non-keyword arg after keyword arg
+2015-10-16 09:25:12,567 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerlist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/manoj/Documents/companyinfo/companyinfo/urls.py", line 9, in <module>
+    url(r'^api/', include('companydetails.urls')),
+  File "/Library/Python/2.7/site-packages/django/conf/urls/__init__.py", line 28, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/manoj/Documents/companyinfo/companydetails/urls.py", line 2, in <module>
+    from companydetails.views import CompanyList, CompanyListDetail, OwnerList, OwnerListDetail
+ImportError: cannot import name OwnerListDetail
+2015-10-16 09:25:57,131 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerlist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 84, in OwnerList
+    name = serializer.validated_data['company']
+KeyError: 'company'
+2015-10-16 09:31:23,496 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerlist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 84, in OwnerList
+    serializer.save()
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 164, in save
+    self.instance = self.create(validated_data)
+  File "/Users/manoj/Documents/companyinfo/companydetails/serializers.py", line 54, in create
+    company = validated_data['company'],
+KeyError: 'company'
+2015-10-16 09:32:26,528 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerlist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 84, in OwnerList
+    serializer.save()
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 164, in save
+    self.instance = self.create(validated_data)
+  File "/Users/manoj/Documents/companyinfo/companydetails/serializers.py", line 54, in create
+    company = validated_data['company'],
+KeyError: 'company'
+2015-10-16 09:33:12,209 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerlist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 84, in OwnerList
+    serializer.save()
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 164, in save
+    self.instance = self.create(validated_data)
+  File "/Users/manoj/Documents/companyinfo/companydetails/serializers.py", line 54, in create
+    company = validated_data['company'],
+KeyError: 'company'
+2015-10-16 09:34:13,752 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerlist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 84, in OwnerList
+    serializer.save()
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 164, in save
+    self.instance = self.create(validated_data)
+  File "/Users/manoj/Documents/companyinfo/companydetails/serializers.py", line 54, in create
+    company = validated_data['company'],
+KeyError: 'company'
+2015-10-16 09:41:27,814 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerlist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 85, in OwnerList
+    serializer.save()
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 164, in save
+    self.instance = self.create(validated_data)
+  File "/Users/manoj/Documents/companyinfo/companydetails/serializers.py", line 54, in create
+    company = validated_data['company'],
+KeyError: 'company'
+2015-10-16 09:42:31,821 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerlist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 85, in OwnerList
+    serializer.save()
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 164, in save
+    self.instance = self.create(validated_data)
+  File "/Users/manoj/Documents/companyinfo/companydetails/serializers.py", line 54, in create
+    company = validated_data['company'],
+KeyError: 'company'
+2015-10-16 09:42:57,876 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerlist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 85, in OwnerList
+    serializer.save()
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 164, in save
+    self.instance = self.create(validated_data)
+  File "/Users/manoj/Documents/companyinfo/companydetails/serializers.py", line 54, in create
+    company = validated_data['company'],
+KeyError: 'company'
+2015-10-16 09:45:25,445 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerlist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 85, in OwnerList
+    serializer.save()
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 164, in save
+    self.instance = self.create(validated_data)
+  File "/Users/manoj/Documents/companyinfo/companydetails/serializers.py", line 58, in create
+    company = validated_data['company'],
+KeyError: 'company'
+2015-10-16 09:54:20,742 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerlist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/manoj/Documents/companyinfo/companyinfo/urls.py", line 9, in <module>
+    url(r'^api/', include('companydetails.urls')),
+  File "/Library/Python/2.7/site-packages/django/conf/urls/__init__.py", line 28, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/manoj/Documents/companyinfo/companydetails/urls.py", line 2, in <module>
+    from companydetails.views import CompanyList, CompanyListDetail, OwnerList
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 83
+    serializer = OwnerSerializer(obj, data=request.DATA, pk)
+SyntaxError: non-keyword arg after keyword arg
+2015-10-16 09:54:44,446 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerlist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/manoj/Documents/companyinfo/companyinfo/urls.py", line 9, in <module>
+    url(r'^api/', include('companydetails.urls')),
+  File "/Library/Python/2.7/site-packages/django/conf/urls/__init__.py", line 28, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/manoj/Documents/companyinfo/companydetails/urls.py", line 2, in <module>
+    from companydetails.views import CompanyList, CompanyListDetail, OwnerList
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 83
+    serializer = OwnerSerializer(obj, data=request.DATA, pk)
+SyntaxError: non-keyword arg after keyword arg
+2015-10-16 09:54:46,421 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerlist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/manoj/Documents/companyinfo/companyinfo/urls.py", line 9, in <module>
+    url(r'^api/', include('companydetails.urls')),
+  File "/Library/Python/2.7/site-packages/django/conf/urls/__init__.py", line 28, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/manoj/Documents/companyinfo/companydetails/urls.py", line 2, in <module>
+    from companydetails.views import CompanyList, CompanyListDetail, OwnerList
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 83
+    serializer = OwnerSerializer(obj, data=request.DATA, pk)
+SyntaxError: non-keyword arg after keyword arg
+2015-10-16 09:55:01,070 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerlist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 343, in resolve
+    for pattern in self.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 372, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 366, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/manoj/Documents/companyinfo/companyinfo/urls.py", line 9, in <module>
+    url(r'^api/', include('companydetails.urls')),
+  File "/Library/Python/2.7/site-packages/django/conf/urls/__init__.py", line 28, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/manoj/Documents/companyinfo/companydetails/urls.py", line 2, in <module>
+    from companydetails.views import CompanyList, CompanyListDetail, OwnerList
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 83
+    serializer = OwnerSerializer(obj, data=request.DATA, p)
+SyntaxError: non-keyword arg after keyword arg
+2015-10-16 10:01:29,221 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerlist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 85, in OwnerList
+    serializer.save(company=int(pk))
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 164, in save
+    self.instance = self.create(validated_data)
+  File "/Users/manoj/Documents/companyinfo/companydetails/serializers.py", line 59, in create
+    name = validated_data['name'],
+  File "/Library/Python/2.7/site-packages/django/db/models/manager.py", line 92, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 370, in create
+    obj = self.model(**kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/base.py", line 452, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'company' is an invalid keyword argument for this function
+2015-10-16 10:03:41,104 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerlist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 85, in OwnerList
+    serializer.save(company_id=int(pk))
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 164, in save
+    self.instance = self.create(validated_data)
+  File "/Users/manoj/Documents/companyinfo/companydetails/serializers.py", line 59, in create
+    name = validated_data['name'],
+  File "/Library/Python/2.7/site-packages/django/db/models/manager.py", line 92, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 372, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Library/Python/2.7/site-packages/django/db/models/base.py", line 589, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Library/Python/2.7/site-packages/django/db/models/base.py", line 617, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/Library/Python/2.7/site-packages/django/db/models/base.py", line 698, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Library/Python/2.7/site-packages/django/db/models/base.py", line 731, in _do_insert
+    using=using, raw=raw)
+  File "/Library/Python/2.7/site-packages/django/db/models/manager.py", line 92, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 921, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/compiler.py", line 920, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Python/2.7/site-packages/django/db/backends/utils.py", line 81, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Library/Python/2.7/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Python/2.7/site-packages/mysql/connector/django/base.py", line 135, in execute
+    return self._execute_wrapper(self.cursor.execute, query, args)
+  File "/Library/Python/2.7/site-packages/mysql/connector/django/base.py", line 121, in _execute_wrapper
+    utils.IntegrityError(err.msg), sys.exc_info()[2])
+  File "/Library/Python/2.7/site-packages/mysql/connector/django/base.py", line 115, in _execute_wrapper
+    return method(query, args)
+  File "/Library/Python/2.7/site-packages/mysql/connector/cursor.py", line 507, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+  File "/Library/Python/2.7/site-packages/mysql/connector/connection.py", line 722, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+  File "/Library/Python/2.7/site-packages/mysql/connector/connection.py", line 640, in _handle_result
+    raise errors.get_exception(packet)
+IntegrityError: Column 'company_id' cannot be null
+2015-10-16 10:04:52,428 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerlist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 85, in OwnerList
+    serializer.save(company_id=int(pk))
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 164, in save
+    self.instance = self.create(validated_data)
+  File "/Users/manoj/Documents/companyinfo/companydetails/serializers.py", line 58, in create
+    company_id = validated_data['company'],
+KeyError: 'company'
+2015-10-16 10:54:33,398 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerlist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 77, in OwnerList
+    return Response(serializer.data)
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 615, in data
+    ret = super(ListSerializer, self).data
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 565, in to_representation
+    self.child.to_representation(item) for item in iterable
+TypeError: 'OwnerDetails' object is not iterable
+2015-10-16 10:57:59,036 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerlist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 77, in OwnerList
+    serializer = serializer.data.filter(company_id=pk)
+AttributeError: 'ReturnList' object has no attribute 'filter'
+2015-10-16 10:58:49,915 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerlist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 77, in OwnerList
+    serializer = serializer.data.filter(company_id=pk)
+AttributeError: 'ReturnList' object has no attribute 'filter'
+2015-10-16 11:03:04,394 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerlist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 77, in OwnerList
+    ser_dict=dict(serializer.data)
+ValueError: dictionary update sequence element #0 has length 3; 2 is required
+2015-10-16 11:03:32,549 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerlist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 78, in OwnerList
+    ser_dict=dict(serializer.data)
+ValueError: dictionary update sequence element #0 has length 3; 2 is required
+2015-10-16 11:03:58,255 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerlist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 78, in OwnerList
+    ser_dict=dict(serializer.data)
+ValueError: dictionary update sequence element #0 has length 3; 2 is required
+2015-10-16 11:05:44,957 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerlist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 74, in OwnerList
+    obj = OwnerDetails.objects.filte(company_id=pk)
+AttributeError: 'Manager' object has no attribute 'filte'
+2015-10-16 11:07:23,913 [ERROR] django.request: Internal Server Error: /api/companylist/4/ownerlist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 86, in OwnerList
+    serializer.save(company_id=int(pk))
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 164, in save
+    self.instance = self.create(validated_data)
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 768, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "/Library/Python/2.7/site-packages/django/db/models/manager.py", line 92, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 372, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Library/Python/2.7/site-packages/django/db/models/base.py", line 589, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Library/Python/2.7/site-packages/django/db/models/base.py", line 617, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/Library/Python/2.7/site-packages/django/db/models/base.py", line 698, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Library/Python/2.7/site-packages/django/db/models/base.py", line 731, in _do_insert
+    using=using, raw=raw)
+  File "/Library/Python/2.7/site-packages/django/db/models/manager.py", line 92, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 921, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/compiler.py", line 920, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Python/2.7/site-packages/django/db/backends/utils.py", line 81, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Library/Python/2.7/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Python/2.7/site-packages/mysql/connector/django/base.py", line 135, in execute
+    return self._execute_wrapper(self.cursor.execute, query, args)
+  File "/Library/Python/2.7/site-packages/mysql/connector/django/base.py", line 121, in _execute_wrapper
+    utils.IntegrityError(err.msg), sys.exc_info()[2])
+  File "/Library/Python/2.7/site-packages/mysql/connector/django/base.py", line 115, in _execute_wrapper
+    return method(query, args)
+  File "/Library/Python/2.7/site-packages/mysql/connector/cursor.py", line 507, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+  File "/Library/Python/2.7/site-packages/mysql/connector/connection.py", line 722, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+  File "/Library/Python/2.7/site-packages/mysql/connector/connection.py", line 640, in _handle_result
+    raise errors.get_exception(packet)
+IntegrityError: Cannot add or update a child row: a foreign key constraint fails (`companyinfo`.`companydetails_ownerdetails`, CONSTRAINT `company_id_422034f4422a8de2_fk_companydetails_companydetails_id` FOREIGN KEY (`company_id`) REFERENCES `companydetails_companydetails` )
+2015-10-16 11:57:10,898 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerslist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 345, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 211, in resolve
+    match = self.regex.search(path)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 179, in regex
+    (regex, six.text_type(e)))
+ImproperlyConfigured: "^index/companylist/(?P[0-9]+)/ownerslist$" is not a valid regular expression: unknown specifier: ?P[
+2015-10-16 11:57:19,651 [ERROR] django.request: Internal Server Error: /api/companylist/1/ownerslist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 98, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 345, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 211, in resolve
+    match = self.regex.search(path)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 179, in regex
+    (regex, six.text_type(e)))
+ImproperlyConfigured: "^index/companylist/(?[0-9]+)/ownerslist$" is not a valid regular expression: unexpected end of pattern
+2015-10-16 12:01:26,386 [ERROR] django.request: Internal Server Error: /index/companylist/9/ownerslist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: ownerslist() got an unexpected keyword argument 'pk'
+2015-10-16 12:03:38,775 [ERROR] django.request: Internal Server Error: /index/companylist/9/ownerslist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: ownerslist() got an unexpected keyword argument 'pk'
+2015-10-16 12:05:35,467 [ERROR] django.request: Internal Server Error: /api/companylist/7/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 57, in CompanyListDetail
+    return Response(serializer.data)
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 463, in data
+    ret = super(Serializer, self).data
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 432, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/Library/Python/2.7/site-packages/rest_framework/relations.py", line 240, in to_representation
+    "the serializer." % self.__class__.__name__
+AssertionError: `HyperlinkedIdentityField` requires the request in the serializer context. Add `context={'request': request}` when instantiating the serializer.
+2015-10-16 12:33:04,187 [ERROR] django.request: Internal Server Error: /api/companylist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 42, in CompanyList
+    return Response(serializer.data, status=status.HTTP_201_CREATED)
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 463, in data
+    ret = super(Serializer, self).data
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 432, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/Library/Python/2.7/site-packages/rest_framework/relations.py", line 240, in to_representation
+    "the serializer." % self.__class__.__name__
+AssertionError: `HyperlinkedIdentityField` requires the request in the serializer context. Add `context={'request': request}` when instantiating the serializer.
+2015-10-16 12:34:59,716 [ERROR] django.request: Internal Server Error: /api/companylist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 41, in CompanyList
+    serializer.save()
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 164, in save
+    self.instance = self.create(validated_data)
+  File "/Users/manoj/Documents/companyinfo/companydetails/serializers.py", line 30, in create
+    phone = validated_data['phone']
+  File "/Library/Python/2.7/site-packages/django/db/models/manager.py", line 92, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 372, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Library/Python/2.7/site-packages/django/db/models/base.py", line 589, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Library/Python/2.7/site-packages/django/db/models/base.py", line 617, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/Library/Python/2.7/site-packages/django/db/models/base.py", line 698, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Library/Python/2.7/site-packages/django/db/models/base.py", line 731, in _do_insert
+    using=using, raw=raw)
+  File "/Library/Python/2.7/site-packages/django/db/models/manager.py", line 92, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 921, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/compiler.py", line 920, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Python/2.7/site-packages/django/db/backends/utils.py", line 81, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Library/Python/2.7/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Python/2.7/site-packages/mysql/connector/django/base.py", line 135, in execute
+    return self._execute_wrapper(self.cursor.execute, query, args)
+  File "/Library/Python/2.7/site-packages/mysql/connector/django/base.py", line 121, in _execute_wrapper
+    utils.IntegrityError(err.msg), sys.exc_info()[2])
+  File "/Library/Python/2.7/site-packages/mysql/connector/django/base.py", line 115, in _execute_wrapper
+    return method(query, args)
+  File "/Library/Python/2.7/site-packages/mysql/connector/cursor.py", line 507, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+  File "/Library/Python/2.7/site-packages/mysql/connector/connection.py", line 722, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+  File "/Library/Python/2.7/site-packages/mysql/connector/connection.py", line 640, in _handle_result
+    raise errors.get_exception(packet)
+IntegrityError: Duplicate entry 'euroexpress@mail.com' for key 'companydetails_companydetails_email_54092f110edbe84c_uniq'
+2015-10-16 12:42:23,615 [ERROR] django.request: Internal Server Error: /api/companylist
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 87, in get_response
+    response = middleware_method(request)
+  File "/Library/Python/2.7/site-packages/django/middleware/common.py", line 82, in process_request
+    "settings.") % (new_url[0], new_url[1]))
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/companylist/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2015-10-16 12:44:33,177 [ERROR] django.request: Internal Server Error: /api/companylist
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 87, in get_response
+    response = middleware_method(request)
+  File "/Library/Python/2.7/site-packages/django/middleware/common.py", line 82, in process_request
+    "settings.") % (new_url[0], new_url[1]))
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/companylist/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2015-10-16 12:55:38,153 [ERROR] django.request: Internal Server Error: /api/companylist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 41, in CompanyList
+    serializer.save()
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 164, in save
+    self.instance = self.create(validated_data)
+  File "/Users/manoj/Documents/companyinfo/companydetails/serializers.py", line 30, in create
+    phone = validated_data['phone']
+  File "/Library/Python/2.7/site-packages/django/db/models/manager.py", line 92, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 372, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Library/Python/2.7/site-packages/django/db/models/base.py", line 589, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Library/Python/2.7/site-packages/django/db/models/base.py", line 617, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/Library/Python/2.7/site-packages/django/db/models/base.py", line 698, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Library/Python/2.7/site-packages/django/db/models/base.py", line 731, in _do_insert
+    using=using, raw=raw)
+  File "/Library/Python/2.7/site-packages/django/db/models/manager.py", line 92, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 921, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/compiler.py", line 920, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Python/2.7/site-packages/django/db/backends/utils.py", line 81, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Library/Python/2.7/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Python/2.7/site-packages/mysql/connector/django/base.py", line 135, in execute
+    return self._execute_wrapper(self.cursor.execute, query, args)
+  File "/Library/Python/2.7/site-packages/mysql/connector/django/base.py", line 121, in _execute_wrapper
+    utils.IntegrityError(err.msg), sys.exc_info()[2])
+  File "/Library/Python/2.7/site-packages/mysql/connector/django/base.py", line 115, in _execute_wrapper
+    return method(query, args)
+  File "/Library/Python/2.7/site-packages/mysql/connector/cursor.py", line 507, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+  File "/Library/Python/2.7/site-packages/mysql/connector/connection.py", line 722, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+  File "/Library/Python/2.7/site-packages/mysql/connector/connection.py", line 640, in _handle_result
+    raise errors.get_exception(packet)
+IntegrityError: Duplicate entry 'euroexpress@mail.com' for key 'companydetails_companydetails_email_54092f110edbe84c_uniq'
+2015-10-16 12:55:44,591 [ERROR] django.request: Internal Server Error: /api/companylist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 41, in CompanyList
+    serializer.save()
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 164, in save
+    self.instance = self.create(validated_data)
+  File "/Users/manoj/Documents/companyinfo/companydetails/serializers.py", line 30, in create
+    phone = validated_data['phone']
+  File "/Library/Python/2.7/site-packages/django/db/models/manager.py", line 92, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 372, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Library/Python/2.7/site-packages/django/db/models/base.py", line 589, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Library/Python/2.7/site-packages/django/db/models/base.py", line 617, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/Library/Python/2.7/site-packages/django/db/models/base.py", line 698, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Library/Python/2.7/site-packages/django/db/models/base.py", line 731, in _do_insert
+    using=using, raw=raw)
+  File "/Library/Python/2.7/site-packages/django/db/models/manager.py", line 92, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 921, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/compiler.py", line 920, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Python/2.7/site-packages/django/db/backends/utils.py", line 81, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Library/Python/2.7/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Python/2.7/site-packages/mysql/connector/django/base.py", line 135, in execute
+    return self._execute_wrapper(self.cursor.execute, query, args)
+  File "/Library/Python/2.7/site-packages/mysql/connector/django/base.py", line 121, in _execute_wrapper
+    utils.IntegrityError(err.msg), sys.exc_info()[2])
+  File "/Library/Python/2.7/site-packages/mysql/connector/django/base.py", line 115, in _execute_wrapper
+    return method(query, args)
+  File "/Library/Python/2.7/site-packages/mysql/connector/cursor.py", line 507, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+  File "/Library/Python/2.7/site-packages/mysql/connector/connection.py", line 722, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+  File "/Library/Python/2.7/site-packages/mysql/connector/connection.py", line 640, in _handle_result
+    raise errors.get_exception(packet)
+IntegrityError: Duplicate entry 'euroexpress@mail.com' for key 'companydetails_companydetails_email_54092f110edbe84c_uniq'
+2015-10-16 12:58:41,986 [ERROR] django.request: Internal Server Error: /api/companylist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 42, in CompanyList
+    return Response(serializer.data, status=status.HTTP_201_CREATED)
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 463, in data
+    ret = super(Serializer, self).data
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 432, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/Library/Python/2.7/site-packages/rest_framework/relations.py", line 240, in to_representation
+    "the serializer." % self.__class__.__name__
+AssertionError: `HyperlinkedIdentityField` requires the request in the serializer context. Add `context={'request': request}` when instantiating the serializer.
+2015-10-16 12:58:59,915 [ERROR] django.request: Internal Server Error: /api/companylist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 41, in CompanyList
+    serializer.save()
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 164, in save
+    self.instance = self.create(validated_data)
+  File "/Users/manoj/Documents/companyinfo/companydetails/serializers.py", line 30, in create
+    phone = validated_data['phone']
+  File "/Library/Python/2.7/site-packages/django/db/models/manager.py", line 92, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 372, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Library/Python/2.7/site-packages/django/db/models/base.py", line 589, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Library/Python/2.7/site-packages/django/db/models/base.py", line 617, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/Library/Python/2.7/site-packages/django/db/models/base.py", line 698, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Library/Python/2.7/site-packages/django/db/models/base.py", line 731, in _do_insert
+    using=using, raw=raw)
+  File "/Library/Python/2.7/site-packages/django/db/models/manager.py", line 92, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 921, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/compiler.py", line 920, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Python/2.7/site-packages/django/db/backends/utils.py", line 81, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Library/Python/2.7/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Python/2.7/site-packages/mysql/connector/django/base.py", line 135, in execute
+    return self._execute_wrapper(self.cursor.execute, query, args)
+  File "/Library/Python/2.7/site-packages/mysql/connector/django/base.py", line 121, in _execute_wrapper
+    utils.IntegrityError(err.msg), sys.exc_info()[2])
+  File "/Library/Python/2.7/site-packages/mysql/connector/django/base.py", line 115, in _execute_wrapper
+    return method(query, args)
+  File "/Library/Python/2.7/site-packages/mysql/connector/cursor.py", line 507, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+  File "/Library/Python/2.7/site-packages/mysql/connector/connection.py", line 722, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+  File "/Library/Python/2.7/site-packages/mysql/connector/connection.py", line 640, in _handle_result
+    raise errors.get_exception(packet)
+IntegrityError: Duplicate entry 'eurocouriers@mail.com' for key 'companydetails_companydetails_email_54092f110edbe84c_uniq'
+2015-10-16 13:07:14,265 [ERROR] django.request: Internal Server Error: /api/companylist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 42, in CompanyList
+    return Response(serializer.data, status=status.HTTP_201_CREATED)
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 463, in data
+    ret = super(Serializer, self).data
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 432, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/Library/Python/2.7/site-packages/rest_framework/relations.py", line 240, in to_representation
+    "the serializer." % self.__class__.__name__
+AssertionError: `HyperlinkedIdentityField` requires the request in the serializer context. Add `context={'request': request}` when instantiating the serializer.
+2015-10-16 13:12:41,680 [ERROR] django.request: Internal Server Error: /api/companylist/1/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 63, in CompanyListDetail
+    serializer.save()
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 161, in save
+    '`update()` did not return an object instance.'
+AssertionError: `update()` did not return an object instance.
+2015-10-16 13:14:07,436 [ERROR] django.request: Internal Server Error: /api/companylist/1/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 63, in CompanyListDetail
+    serializer.save()
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 161, in save
+    '`update()` did not return an object instance.'
+AssertionError: `update()` did not return an object instance.
+2015-10-16 13:16:17,543 [ERROR] django.request: Internal Server Error: /api/companylist/1/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 63, in CompanyListDetail
+    serializer.save()
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 161, in save
+    '`update()` did not return an object instance.'
+AssertionError: `update()` did not return an object instance.
+2015-10-16 13:16:51,540 [ERROR] django.request: Internal Server Error: /api/companylist/1/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 63, in CompanyListDetail
+    serializer.save()
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 161, in save
+    '`update()` did not return an object instance.'
+AssertionError: `update()` did not return an object instance.
+2015-10-16 13:18:28,435 [ERROR] django.request: Internal Server Error: /api/companylist/1/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 63, in CompanyListDetail
+    serializer.save()
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 161, in save
+    '`update()` did not return an object instance.'
+AssertionError: `update()` did not return an object instance.
+2015-10-16 13:20:41,258 [ERROR] django.request: Internal Server Error: /api/companylist/1/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 63, in CompanyListDetail
+    serializer.save()
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 161, in save
+    '`update()` did not return an object instance.'
+AssertionError: `update()` did not return an object instance.
+2015-10-16 13:28:34,542 [ERROR] django.request: Internal Server Error: /api/companylist/1/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 63, in CompanyListDetail
+    serializer.save()
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 161, in save
+    '`update()` did not return an object instance.'
+AssertionError: `update()` did not return an object instance.
+2015-10-16 13:52:25,084 [ERROR] django.request: Internal Server Error: /index/companylist/9/ownerslist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: ownerslist() got an unexpected keyword argument 'pk'
+2015-10-16 13:56:20,447 [ERROR] django.request: Internal Server Error: /index/companylist/9/ownerslist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: ownerslist() takes no arguments (2 given)
+2015-10-16 13:57:06,465 [ERROR] django.request: Internal Server Error: /index/companylist/9/ownerslist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: ownerslist() got an unexpected keyword argument 'pk'
+2015-10-16 13:57:14,340 [ERROR] django.request: Internal Server Error: /index/companylist/9/ownerslist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: ownerslist() got an unexpected keyword argument 'pk'
+2015-10-16 13:57:16,091 [ERROR] django.request: Internal Server Error: /index/companylist/9/ownerslist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: ownerslist() got an unexpected keyword argument 'pk'
+2015-10-16 14:03:46,020 [ERROR] django.request: Internal Server Error: /api/companylist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 39, in CompanyList
+    return Response(serializer.data, status=status.HTTP_201_CREATED)
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 463, in data
+    ret = super(Serializer, self).data
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 432, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/Library/Python/2.7/site-packages/rest_framework/relations.py", line 240, in to_representation
+    "the serializer." % self.__class__.__name__
+AssertionError: `HyperlinkedIdentityField` requires the request in the serializer context. Add `context={'request': request}` when instantiating the serializer.
+2015-10-16 14:04:13,983 [ERROR] django.request: Internal Server Error: /api/companylist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 38, in CompanyList
+    serializer.save()
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 164, in save
+    self.instance = self.create(validated_data)
+  File "/Users/manoj/Documents/companyinfo/companydetails/serializers.py", line 30, in create
+    phone = validated_data['phone']
+  File "/Library/Python/2.7/site-packages/django/db/models/manager.py", line 92, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 372, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Library/Python/2.7/site-packages/django/db/models/base.py", line 589, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Library/Python/2.7/site-packages/django/db/models/base.py", line 617, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/Library/Python/2.7/site-packages/django/db/models/base.py", line 698, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Library/Python/2.7/site-packages/django/db/models/base.py", line 731, in _do_insert
+    using=using, raw=raw)
+  File "/Library/Python/2.7/site-packages/django/db/models/manager.py", line 92, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 921, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/compiler.py", line 920, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Python/2.7/site-packages/django/db/backends/utils.py", line 81, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Library/Python/2.7/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Python/2.7/site-packages/mysql/connector/django/base.py", line 135, in execute
+    return self._execute_wrapper(self.cursor.execute, query, args)
+  File "/Library/Python/2.7/site-packages/mysql/connector/django/base.py", line 121, in _execute_wrapper
+    utils.IntegrityError(err.msg), sys.exc_info()[2])
+  File "/Library/Python/2.7/site-packages/mysql/connector/django/base.py", line 115, in _execute_wrapper
+    return method(query, args)
+  File "/Library/Python/2.7/site-packages/mysql/connector/cursor.py", line 507, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+  File "/Library/Python/2.7/site-packages/mysql/connector/connection.py", line 722, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+  File "/Library/Python/2.7/site-packages/mysql/connector/connection.py", line 640, in _handle_result
+    raise errors.get_exception(packet)
+IntegrityError: Duplicate entry 'euroexpress@mail.com' for key 'companydetails_companydetails_email_54092f110edbe84c_uniq'
+2015-10-16 14:06:04,610 [ERROR] django.request: Internal Server Error: /api/companylist/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 39, in CompanyList
+    return Response(serializer.data, status=status.HTTP_201_CREATED)
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 463, in data
+    ret = super(Serializer, self).data
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 432, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/Library/Python/2.7/site-packages/rest_framework/relations.py", line 240, in to_representation
+    "the serializer." % self.__class__.__name__
+AssertionError: `HyperlinkedIdentityField` requires the request in the serializer context. Add `context={'request': request}` when instantiating the serializer.
+2015-10-16 14:11:42,477 [ERROR] django.request: Internal Server Error: /api/companylist/8/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 61, in CompanyListDetail
+    serializer.save()
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 161, in save
+    '`update()` did not return an object instance.'
+AssertionError: `update()` did not return an object instance.
+2015-10-16 14:12:24,739 [ERROR] django.request: Internal Server Error: /api/companylist/8/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 61, in CompanyListDetail
+    serializer.save()
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 161, in save
+    '`update()` did not return an object instance.'
+AssertionError: `update()` did not return an object instance.
+2015-10-16 14:16:35,469 [ERROR] django.request: Internal Server Error: /api/companylist/8/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 407, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 404, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/manoj/Documents/companyinfo/companydetails/views.py", line 62, in CompanyListDetail
+    return Response(serializer.data)
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 463, in data
+    ret = super(Serializer, self).data
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 212, in data
+    self._data = self.to_representation(self.instance)
+  File "/Library/Python/2.7/site-packages/rest_framework/serializers.py", line 432, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/Library/Python/2.7/site-packages/rest_framework/relations.py", line 240, in to_representation
+    "the serializer." % self.__class__.__name__
+AssertionError: `HyperlinkedIdentityField` requires the request in the serializer context. Add `context={'request': request}` when instantiating the serializer.
