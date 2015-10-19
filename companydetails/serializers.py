@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import CompanyDetails
+from .models import CompanyDetails, OwnerDetails
 import logging 
 
 logger = logging.getLogger('JSON')
